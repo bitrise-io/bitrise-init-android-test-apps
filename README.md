@@ -8,10 +8,10 @@ This repo stores Android projects used for testing the bitrise-init Go lib.
 └── KotlinResponsiveViewsActivity
 ```
 
-GroovyResponsiveViewsActivity
+**GroovyResponsiveViewsActivity**
 
 Simple template project generated using the Responsive Views Activity template in Android Studio with Groovy DSL + Java source code.
 
- KotlinResponsiveViewsActivity
+**KotlinResponsiveViewsActivity**
 
 Simple template project generated using the Responsive Views Activity template in Android Studio with Kotlin DSL + Kotlin source code.
