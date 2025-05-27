@@ -15,6 +15,7 @@ navigationFragmentKtx = "2.8.9"
 navigationUiKtx = "2.8.9"
 junitKtx = "1.2.1"
 test-rety = "1.6.2"
+marathon = "0.10.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -35,4 +36,5 @@ androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.
 gradle-test-rety = { id = "org.gradle.test-retry", version.ref = "test-rety" }
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+marathon = { id = "com.malinskiy.marathon", version.ref = "marathon" }
 

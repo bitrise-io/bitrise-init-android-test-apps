@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.gradle.test.rety)
+    alias(libs.plugins.marathon)
 }
 
 android {
@@ -49,9 +50,15 @@ tasks.withType<Test> {
 
     retry {
         maxRetries.set(2)
-//        maxFailures.set(20)
-//        failOnPassedAfterRetry.set(true)
-//        failOnSkippedAfterRetry.set(true)
+    }
+}
+
+marathon {
+    name = "kotlinresponsiveviewsactivity tests"
+    retryStrategy {
+        fixedQuota {
+            retryPerTestQuota = 2
+        }
     }
 }
 
