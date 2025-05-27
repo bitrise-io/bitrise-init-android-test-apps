@@ -1,6 +1,7 @@
 package io.bitrise.kotlinresponsiveviewsactivity
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
+import androidx.test.platform.app.InstrumentationRegistry
 import io.bitrise.sample.Sample
 import junit.framework.TestCase.fail
 import org.junit.Test
@@ -17,7 +18,8 @@ class FlakyInstrumentedTest {
 
     @Test
     fun flaky() {
-        Sample().functionality()
+        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+        Sample().anotherFunctionality(appContext)
     }
 
     @Test
