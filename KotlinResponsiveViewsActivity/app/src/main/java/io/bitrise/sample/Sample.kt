@@ -1,10 +1,14 @@
 package io.bitrise.sample
 
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
+import java.io.File
 
 class Sample {
-    fun functionality() {
+    fun successfulFunctionality() {
+        println("I'm doing things")
+    }
+
+    fun flakyLocalFunctionality() {
         try {
             val marker = java.nio.file.Paths.get("marker.file")
             if (!java.nio.file.Files.exists(marker)) {
@@ -17,17 +21,10 @@ class Sample {
         }
     }
 
-    fun otherFunctionality() {
-        println("I'm doing things")
-    }
-
-    fun anotherFunctionality(context: Context) {
-        val sharedPreferences = context.getSharedPreferences("UserPreferences", MODE_PRIVATE)
-        val marker = sharedPreferences.getInt("marker", 0)
-        if (marker == 0) {
-            val editor = sharedPreferences.edit()
-            editor.putInt("marker", 1)
-            editor.apply()
+    fun flakyEmulatorFunctionality(context: Context) {
+        val file = File(context.filesDir, "testfile.txt")
+        if (!file.exists()) {
+            file.writeText("marker")
             throw RuntimeException("fail me!")
         }
     }

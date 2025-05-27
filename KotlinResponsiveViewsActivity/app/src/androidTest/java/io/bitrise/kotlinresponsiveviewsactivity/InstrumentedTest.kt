@@ -9,21 +9,21 @@ import org.junit.runner.RunWith
 
 
 @RunWith(AndroidJUnit4::class)
-class FlakyInstrumentedTest {
+class InstrumentedTest {
 
     @Test
     fun successful() {
-        Sample().otherFunctionality()
+        Sample().successfulFunctionality()
     }
 
     @Test
     fun flaky() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        Sample().anotherFunctionality(appContext)
+        Sample().flakyEmulatorFunctionality(appContext)
     }
 
-    @Test
-    fun failing() {
-        fail()
-    }
+//    @Test
+//    fun failing() {
+//        fail()
+//    }
 }

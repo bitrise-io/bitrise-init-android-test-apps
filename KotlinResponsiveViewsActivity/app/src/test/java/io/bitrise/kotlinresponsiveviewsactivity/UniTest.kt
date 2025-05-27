@@ -4,20 +4,20 @@ import io.bitrise.sample.Sample
 import junit.framework.TestCase.fail
 import org.junit.Test
 
-class FlakyUniTest {
+class UniTest {
 
     @Test
     fun successful() {
-        Sample().otherFunctionality()
+        Sample().successfulFunctionality()
     }
 
     @Test
     fun flaky() {
-        Sample().functionality()
+        Sample().flakyLocalFunctionality()
     }
 
-    @Test
-    fun failing() {
-        fail()
-    }
+//    @Test
+//    fun failing() {
+//        fail()
+//    }
 }
