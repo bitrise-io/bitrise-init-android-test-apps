@@ -22,8 +22,11 @@ class InstrumentedTest {
         Sample().flakyEmulatorFunctionality(appContext)
     }
 
-//    @Test
-//    fun failing() {
-//        fail()
-//    }
+    @Test
+    fun randomlyFailing() {
+        val random = (0..1).random()
+        if (random == 1) {
+            fail("Test failed randomly with value: $random")
+        }
+    }
 }
