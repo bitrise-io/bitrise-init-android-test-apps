@@ -19,7 +19,7 @@ class InstrumentedTest2 {
     @Test
     fun flaky() {
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        Sample().flakyEmulatorFunctionality(appContext)
+        Sample().flakyEmulatorFunctionality(appContext, "marker2.txt")
     }
 
     @Test

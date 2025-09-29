@@ -21,8 +21,8 @@ class Sample {
         }
     }
 
-    fun flakyEmulatorFunctionality(context: Context) {
-        val file = File(context.filesDir, "testfile.txt")
+    fun flakyEmulatorFunctionality(context: Context, markerFileName: String = "marker.txt") {
+        val file = File(context.filesDir, markerFileName)
         if (!file.exists()) {
             file.writeText("marker")
             throw RuntimeException("fail me!")
