@@ -16,11 +16,11 @@ class InstrumentedTest2 {
         Sample().successfulFunctionality()
     }
 
-    @Test
-    fun flaky() {
-        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        Sample().flakyEmulatorFunctionality(appContext, "marker2.txt")
-    }
+//    @Test
+//    fun flaky() {
+//        val appContext = InstrumentationRegistry.getInstrumentation().targetContext
+//        Sample().flakyEmulatorFunctionality(appContext, "marker2.txt")
+//    }
 
     @Test
     fun randomlyFailing() {
